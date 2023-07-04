@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Karla:wght@200&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(228, 224, 224, 0.74);
+    padding: 110px 20px 0 20px; 
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    text-transform: uppercase;
+    font-weight:bold;
+    top: 0;
+    left: 0;
+}
+
+
+.title-link{
+    font-size: 40px;
+    padding-left: 50%;
+    line-height: 90px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Se que no se recomienda el important pero me daba algo con el navbar en blanco xddd */
+
+.navbar{
+    background-color: rgb(248, 193, 234) !important ;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.dropdown-menu{
+    background-color:rgba(230, 193, 221, 0.877);
+}
+
+.dropdown-item:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-outline-success{
+    border-color: rgb(231, 168, 215)  ;
+    color: black;
+}
+
+.btn-outline-success:hover{
+    border-color: rgb(231, 168, 215);
+    background-color: rgb(252, 148, 226) ;
+}
+
+.nav-item:hover{
+    background-color: rgb(252, 148, 226) ;
+}
+
+
+.link{
+    text-decoration: none;
+    color:black;
+}
+
+.imagenes{
+    display: flex;
+}
+.local1{
+    width: 30%;
+    height: 30%;
+}
+
+.local2{
+    width: 30%;
+    height: 30%;
+}
+
+.about_us{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.foot{
+    background-color: black;
+    font-family: 'Karla', sans-serif;;
+    color: white;
+}
+
+.video_local{
+    width: 450px;
+    height: 450px;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.flex-prod{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.prod{
+    padding: 10px;
+    background-color: rgba(226, 127, 235, 0.274);
+    border-radius: 10%;
+}
+
+.img_prod{
+    width: 200px;
+    height: 200px;
+}
+
+.buy{
+    width: 200px;
+    border-radius: 20%;
+    margin: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "foto detalles"
+    "detalles detalles";
+}
+
+.prod_img{
+    height: 80%;
+    width: 60%;
+    grid-area: foto;
+}
+
+.prod_detail{
+    height: 80%;
+    grid-area: detalles;
+}
+
+.login {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.login h2 {
+    color: rgb(252, 148, 226);
+    margin-bottom: 10px;
+}
+.login input[type=email], .login input[type=password], .login input[type=submit] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid rgb(252, 148, 226);
+    border-radius: 5px;
+}
+.login input[type=submit] {
+    background-color: rgb(252, 148, 226);
+    color: #fff;
+    cursor: pointer;
+}
+
+.registro {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.registro h2 {
+    color: rgba(230, 193, 221, 0.877);
+    margin-bottom: 10px;
+}
+.registro input[type=text], .registro input[type=email], .registro input[type=password], .registro input[type=date], .registro input[type=submit], .registro input[type=reset] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid rgba(230, 193, 221, 0.877);
+    border-radius: 5px;
+}
+.registro input[type=submit] {
+    background-color: rgba(230, 193, 221, 0.877);
+    color: #fff;
+    cursor: pointer;
+}
+.registro input[type=reset] {
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    .banner-image,
+    .product-image,
+    .local-video {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        height: 0;
+        margin-top: 56px;
+        z-index: -1;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-title {
+        margin-top: 8px;
+    }
+
+    .map-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+}
+
+
+/*
+font-family: 'Josefin Sans', sans-serif; Titulo
+font-family: 'Karla', sans-serif; Footer
+font-family: 'Montserrat', sans-serif; Parrafos comunes
+*/
